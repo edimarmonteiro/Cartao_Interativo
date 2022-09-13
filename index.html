@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="epr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estely.css">
+    <title>Cartão Interativo</title>
+</head>
+<body>
+            <div class="img-o1">
+                <img class="frent-car" src="frent-car.png" alt="">
+                <p class="span"> <span id="valor_name"></span> </p>
+                <!--Receber o valor que vai para o js e volta para o html-->
+                <p class="span_number"><span id="valor_number"></span> </p>
+                <!--Receber o valor do js e escrever no htnl o MES-->
+                <p class="span_mm"> <span id="valor_select_mm_car"></span> </p>
+                <!--Recebendo o valor do js e escrevendo no html o ANO-->
+                <p class="span_yy"> <span id="valor_select_yy_car"></span> </p>
+            </div>
+            <!--DIVs para colocar o texto dentro do cartão-->
+            <div class="img-02">
+                <img class="tras-car" src="tras.png" alt="">
+                <p class="span_cvc"> <span id="valor_cvc_car"> </span></p>
+            </div>
+    <div class="div-paidetd">
+        <form action="" id="formulario">
+            <div class="div-name-use">
+                <span class="span-nome">
+                    <p>CARDHOLDER NAME</p></span>
+                <input type="text" 
+                id="name" value="" 
+                onkeyup="nome_usuarios()" 
+                placeholder="Seu Nome" 
+                required
+                autocomplete="text">
+            </div>
+            
+            <div class="div-numero-car">
+                <p>CARD NUMBER</p>
+                <input type="text" 
+                maxlength="16" 
+                id="number" 
+                value=""
+                onkeyup="numero_cartao()" 
+                placeholder="Numero do Cartão" 
+                required>
+            </div>
+
+            <div class="mm-car">
+                <div>
+                    <p>EXPIRATION (MM/YY)</p>
+                        <select id="select_mm_car" onkeyup="mes_cartao()">
+                        <option  value="month" selected disabled >Month</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        </select>
+
+                
+                    
+                    <select id="select_yy_car" value="" onkeyup="ano_cartao()">
+                        <option value="year">Year</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                        <option value="2031">2031</option>
+                        <option value="2032">2032</option>
+                    </select>
+
+                </div>
+
+                <div>
+                    <p>CVC</p>
+                    <input type="text" 
+                    maxlength="3" 
+                    id="cvc_car" value="" 
+                    onkeyup="qatro_digto_cartao()" 
+                    required 
+                    placeholder="cvc">
+                </div>
+                <br>
+                <br>
+
+            <input type="submit" 
+            onclick="executar()" 
+            value="Submit" 
+            id="butao">
+        </form>
+
+    </div>
+    <!--<script src="anima.js">
+        var card = new card({
+            form: 'form',
+            container:'.div-paidetd',
+
+        placeholders: {
+            name: '*****************',
+            name: 'your name',
+            cvc: '****'
+        }
+    });
+    </script>-->
+
+    <script src="anima.js"></script>
+</body>
+</html>
